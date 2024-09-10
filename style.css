@@ -1,0 +1,74 @@
+/* Basic Body Styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; /* Light blue background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Main Container Styling */
+.main {
+    text-align: center;
+    background-color: #ffffff; /* White background for the main container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+/* Fan Image Styling */
+img {
+    padding: 50px;
+    border-radius: 50%;
+    border: 10px solid #00796b; /* Teal border around the fan */
+    animation: fananim linear infinite;
+    max-width: 200px;
+    transition: all 0.5s ease;
+}
+
+/* Button Styling */
+button {
+    background-color: #00796b; /* Teal button color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+button:active {
+    transform: scale(1); /* Reset scale on click */
+}
+
+/* Animation for Fan Rotation */
+@keyframes fananim {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 150px; /* Smaller image on mobile devices */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text on mobile */
+        padding: 8px 16px;
+    }
+}
